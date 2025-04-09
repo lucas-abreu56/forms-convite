@@ -1,0 +1,83 @@
+.radio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    border-radius: 8px;
+}
+
+.radio-inner {
+    display: flex;
+    position: relative;
+    width: 134px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+
+    input {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        inset: 0;
+        color: var(--text-body);
+    }
+
+    input:has(:checked){
+        background-color: var(--shape-hover);
+        svg {
+            color: var(--brand-light);
+        }
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+        color: var(--text-heading);
+
+    }
+}
+
+.radio-inner:has(:checked){
+    border-radius: 8px;
+    background-color: var(--shape-hover);
+    color: var(--text-heading);
+
+
+    svg {
+        color: var(--brand-light);
+    }
+}
+
+.radio-wrapper-colors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    label {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.radio-inner-colors input {
+    display: none;
+}
+
+.radio-inner-colors svg {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    outline: 6px solid var(--shape-hover);
+    rect {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.radio-inner-colors input:checked + svg {
+    border: 4px solid var(--brand-light);
+    transform: scale(1.1);
+}
+.radio-event{
+    height: 47.33px;
+}

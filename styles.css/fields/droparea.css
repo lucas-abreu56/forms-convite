@@ -1,0 +1,33 @@
+.droparea-wrapper {
+    
+    input  {
+        display: none;
+    }
+
+    label{
+        display: flex;
+    }
+}
+
+.file-button {
+    all: unset;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-heading);
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+
+
+    border: 1px solid var(--input-stroke);
+
+    &:hover, &:focus {
+        outline: .25rem solid var(--brand-light);
+        background-color: var(--input-stroke);
+    }
+}
+

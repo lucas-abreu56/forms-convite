@@ -1,0 +1,71 @@
+input, textarea, select {
+    appearance: none;
+    width: 100%;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    outline: 1px solid var(--input-stroke);
+    background-color: var(--input-background);
+    color: var(--input-placeholder);
+
+    padding: .75rem 1rem;
+
+    font: var(--body-md);
+}
+
+label {
+    color: var(--text-body);
+    display: block;
+    margin-bottom: .75rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: .25rem solid var(--input-stroke);
+    border-color: var(--brand-light);
+    outline-offset: .1px;
+}
+
+input[type="date"]:focus-within{
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator{
+        opacity: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../../assets/icons/calendar.svg) center/contain;
+        right: 1rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 50%;
+        transform: translateY(-50);
+    }
+}
+
+select {
+    background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
+
+.input-wrapper:has([disabled]) {
+    opacity: .5;
+}
+
+.required-message {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--danger);
+    font: var(--text-sm);
+    margin-top: 0.25rem;
+}
+
+input:required:invalid ~ .required-message {
+    display: flex;
+}
+
+input:required:invalid {
+    border: 1px solid var(--danger);
+}

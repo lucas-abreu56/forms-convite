@@ -1,0 +1,50 @@
+@import url(fields/index.css);
+
+.forms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+fieldset {
+    border: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.actions-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    all: unset;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-heading);
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    &.btn-primary {
+        margin-left: auto;
+        border: 1px solid var(--input-stroke);
+
+        &:hover, &:focus {
+            color: var(--text-heading);
+            outline: .25rem solid var(--brand-light);
+            background-color: var(--brand-light);
+        }
+    }
+}
+

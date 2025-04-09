@@ -1,0 +1,58 @@
+#app {
+    display: grid;
+    grid-template-columns: 32.79% 67.21%;
+    overflow: hidden;
+}
+
+main {
+    margin: 4rem 4rem 4rem 0;
+    background-color: var(--shape-body);
+    border-radius: 0 12px 12px 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    border: 10px solid var(--shape-background);
+    position: relative;
+}
+.main-container {
+    margin: 8.125rem 10.313rem 8.125rem 10.313rem;
+
+    & .main-content {
+        display: flex;
+        flex-direction: column;
+        margin: 5rem 8.125rem 5rem 8.125rem;
+    }
+}
+
+aside {
+    position: relative;
+    padding: 4rem 0 0 4rem;
+    overflow: auto;
+
+
+    header {
+        position: absolute;
+        margin: 2rem;
+
+        img {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            margin-bottom: .25rem;
+        }
+    }
+
+    p {
+        font: var(--body-md);
+        color: var(--text-heading);
+    }
+
+    .aside-container {
+        width: fit-content;
+        height: 46.563rem;
+        border: 10px solid var(--shape-background);
+        border-radius: 12px 0 0 12px;
+        margin-left: auto;
+    }
+}
