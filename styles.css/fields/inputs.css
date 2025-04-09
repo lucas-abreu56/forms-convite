@@ -45,10 +45,6 @@ input[type="date"]:focus-within{
     }
 }
 
-select {
-    background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
-}
-
 .input-wrapper:has([disabled]) {
     opacity: .5;
 }
